@@ -28,3 +28,11 @@ Use **IIS-Server-Manager** GUI to add the following:
   icacls . /grant "NT AUTHORITY\IUSR:(OI)(CI)(RX)"
   icacls . /grant "Builtin\IIS_IUSRS:(OI)(CI)(RX)"
   ```
+
+This python script is based on **usdzcreateasstlib** provided by Apple in its WWDC 2019 **USD Tools** collection.
+
+The changes I made are:
+
+* Make commandline parameters match the way IIS calls python scripts.
+
+* Allow more than one instance of a product/item to be included to a cart USDZ.
