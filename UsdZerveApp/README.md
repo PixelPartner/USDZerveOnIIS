@@ -14,11 +14,12 @@ Use **IIS-Server-Manager** GUI to add the following:
   
 * Add an **Application** of type **Script**:
   `usdzerve` pointing to `C:\usdzerve\`  
-  Copy `createbasket.py` to this folder.
+  Copy `usdcat` from `%USD_INSTALL_ROOT%\bin\` to this folder and name it `usdcat.py`.
+  Copy `usdzip` from `%USD_INSTALL_ROOT%\bin\` to this folder and name it `usdzip.py`.
+  
+* **Adopt all file paths** in ModelsController.cs according to your setup.
 
-
-* Add a new **handler**:
-  `.py` calling `C:\Python27\python.exe %s %s C:\inetpub\wwwroot\models`
+* **Build, publish and deploy** the ASP.NETCore-Project `USDZerve.sln` as `USDZerveApp` to the IIS-subdomain of your choice and convert it to an Application.
   
 * **Add rights** to several folders `C:\inetpub\wwwroot\models`, `C:\usdzerve\` to allow the process to **write and execute**:
   ```
